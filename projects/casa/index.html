@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description"
+      content="We propose CASA: Context-Aware Sequence Alignment using 4D Skeletal Augmentation. Based on off-the-shelf human pose estimators, we propose a novel context-aware self-supervised learning architecture to align sequences of actions.">
+   <meta name="keywords"
+      content="video alignment; self-supervised learning; transformer; pose alignment; 3D scene; deep learning; 3D vision; computer vision;">
+   <meta name="author" content="Taein Kwon">
+   <title>[CVPR 2022] Context-Aware Sequence Alignment using 4D Skeletal Augmentation</title>
+
+   <!--<meta property="og:title" content="[ICCV 2021] LEMO: ..." />-->
+   <!--<meta property="og:description" content="LEMO is a ... ">-->
+   <!--<meta property="og:image" content="images/teaser.jpg" />-->
+
+   <!--<meta name="twitter:card" content="summary_large_image" />-->
+   <!--<meta name="twitter:title" content="[ICCV 2021] LEMO: ..." />-->
+   <!--<meta name="twitter:description" content="LEMO is a ..." />-->
+   <!--<meta name="twitter:image" content="https://neuralbodies.github.io/LEAP/images/teaser1200x630.jpg" />-->
+   <!--<meta name="twitter:image:alt" content="LEMO ICCV 2021" />-->
+
+   <!-- Bootstrap core CSS -->
+   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Custom styles for this template -->
+   <link href="css/scrolling-nav.css" rel="stylesheet">
+   <!-- nice figures  -->
+   <!--<link rel="stylesheet" href="css/font-awesome.css">-->
+   <!--<link rel="icon" type="image/png" href="images/favicon.png">-->
+
+</head>
+
+<body id="page-top">
+   <!-- Navigation -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+         <a class="navbar-brand js-scroll-trigger" href="#page-top">CASA</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#about">About</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#video">Video</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#downloads">Downloads</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#citation">Citation</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+
+   <header class="bg-light text-black">
+      <div class="container text-center">
+         <h1>CASA </h1>
+         <h2>Context-Aware Sequence Alignment using 4D Skeletal Augmentation</h2><br>
+         <!--<p class="lead"><i>LEMO is a method to learn motion priors ...</i></p> -->
+         <div id="content">
+            <div id="content-inner">
+
+               <div class="section head">
+
+                  <div class="authors">
+                     <h5>
+                        <a
+                           href="https://inf.ethz.ch/people/people-atoz/person-detail.MjQyOTY2.TGlzdC8zMDQsLTIxNDE4MTU0NjA=.html">Taein
+                           Kwon</a><sup>1</sup>&nbsp;
+                        <a href="https://yz-cnsdqz.github.io/">Bugra Tekin</a><sup>2</sup>&nbsp;
+                        <a href="https://www.microsoft.com/en-us/research/people/febogo/">Siyu
+                           Tang</a><sup>1</sup>&nbsp;
+                        <a href="https://people.inf.ethz.ch/pomarc/">Marc Pollefeys</a><sup>1,2</sup>&nbsp;
+
+                        <h5>
+                  </div>
+
+                  <div class="affiliations">
+                     <h5>
+                        <sup>1</sup><a href="https://inf.ethz.ch/">Department of Computer Science, ETH
+                           Zurich</a>&nbsp;
+                        <sup>2</sup><a
+                           href="https://www.microsoft.com/en-us/research/lab/mixed-reality-ai-zurich/">Microsoft MR &
+                           AI Lab,
+                           Zurich<br></a>
+                        <h5>
+                  </div>
+
+                  <div class="venue">
+                     <h5>IEEE Conference on Computer Vision and Pattern Recognition(<a
+                           href="http://cvpr2022.thecvf.com/" target="_blank">CVPR</a>) 2022 (Oral)<h5>
+                  </div>
+
+                  <div class="downloads">
+                     <br>
+                     <h3>
+                        <a class="publink" href="" target="_blank" style="text-decoration: none"> Paper <i
+                              class="fa fa-print"></i></a> &nbsp;&nbsp;
+                        <a class="publink" href="" target="_blank" style="text-decoration: none"> Code <i
+                              class="fa fa-github"></i></a> &nbsp;&nbsp;
+                        <h3>
+                  </div>
+
+               </div>
+
+
+               <!-- <br> -->
+
+
+            </div>
+   </header>
+
+
+   <section id="about" class="about-section">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-10 mx-auto">
+               <p class="lead text-justify">
+                  <!-- where linear blend skinning (LBS) functions are usually applied to drive the deformation of a human body from a canonical space to a posed space.  -->
+               </p>
+               <br> <br>
+               <div class="img-wide text-center">
+                  <!-- <p><img class="img-fluid" alt="teaser" src="https://via.placeholder.com/1500x600"></p> -->
+                  <p><img class="img-fluid" alt="teaser" src="images/teaser.png"></p>
+               </div>
+               <br><br>
+               <h2>Abstract</h2>
+               <p class="lead text-justify">
+                  Temporal alignment of fine-grained human actions in videos is important for numerous applications in
+                  computer vision,
+                  robotics, and mixed reality. State-of-the-art methods directly learn image-based embedding space by
+                  leveraging powerful
+                  deep convolutional neural networks. While being straightforward, their results are far from
+                  satisfactory, the aligned
+                  videos exhibit severe temporal discontinuity without additional post-processing steps. The recent
+                  advancements in human
+                  body and hand pose estimation in the wild promise new ways of addressing the task of human action
+                  alignment in videos.
+                  In this work, based on off-the-shelf human pose estimators, we propose a novel context-aware
+                  self-supervised learning
+                  architecture to align sequences of actions. We name it CASA. Specifically, CASA employs self-attention
+                  and
+                  cross-attention mechanisms to incorporate the spatial and temporal context of human actions, which can
+                  solve the
+                  temporal discontinuity problem. Moreover, we introduce a self-supervised learning scheme that is
+                  empowered by novel 4D
+                  augmentation techniques for 3D skeleton representations. We systematically evaluate the key components
+                  of our method.
+                  Our experiments on three public datasets demonstrate CASA significantly improves phase progress and
+                  Kendall's Tau scores
+                  over the previous state-of-the-art methods.
+               </p>
+               <!--<p class="lead text-justify">
+                      where linear blend skinning (LBS) functions are usually applied to drive the deformation of a human body from a canonical space to a posed space.  -->
+               <!-- </p>
+                  <br> <br>
+                   <div class="img-wide text-center">
+                      To account for the undefined skinning weights for the points
+                     that are not on the surface of a human body, LEAP leverages
+                     the consistency relationship between the forward LBS
+                     and the inverse LBS weights and incorporates cycle-distance
+                     into the occupancy network.
+                  </p> -->
+               <!--<p class="lead text-justify">
+                      LEAP captures accurate identify- and pose-dependent
+                     deformations through advanced encoding schemes that
+                     incorporate prior knowledge about the kinematic structure
+                     and plausible shape of a human body.
+                  </p> -->
+               <br> <br>
+               <h2>Pipeline Overview</h2>
+               <div class="text-center">
+                  <p><img class="img-fluid" alt="method overview" src="images/pipeline.png"></p>
+               </div>
+               <p class="lead text-justify">
+                  The proposed framework takes as input a skeleton sequence S<sub>k</sub> along with its
+                  spatio-temporally
+                  augmented version S′<sub>k</sub>. Both sequences are encoded by temporal positional encodings.
+                  Self- and cross-attentional layers learn contextual information within and across sequences with the
+                  help of temporal positional encoding.
+                  We employ a projection head to improve our representation quality.
+                  We use a contrastive regression loss that matches a pose sequence with its 4D augmented version. For
+                  the
+                  downstream tasks and alignment, we use the embeddings before the projection head stage.
+               </p>
+
+               <!-- <h4>Use-case</h4> -->
+               <p class="lead text-justify">
+                  <!-- We release a pretrained LEAP model that generalizes to unseen human bodies.
+                    LEAP can be easily integrated into learning pipelines that require
+                     an efficient occupancy check to resolve collisions with other geometries flexibly represented as point clounds. -->
+                  <!--</p>-->
+                  <!--<br> <br>-->
+                  <!--<div class="text-center">-->
+                  <!--<p><img class="img-fluid" alt="Realistic human bodies" src="images/LEAP optimization.svg"></p>-->
+                  <!--</div>-->
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="video" class="">
+
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-10 mx-auto">
+
+               <h2 class="section-title-tc">Video</h2>
+               Coming Soon
+               <div class="embed-responsive embed-responsive-16by9">
+
+                  <iframe class="embed-responsive-item" src="" title="" frameborder="0"
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                     allowfullscreen></iframe>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!--
+   <section id="more_vis" class="">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-10 mx-auto">
+               <br>
+               <h2 class="section-title-tc">More Visualization Results</h2>
+               <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/x6KfAQRcZFY"
+                     title="[ICCV 2021] Learning Motion Priors for 4D Human Body Capture in 3D Scenes" frameborder="0"
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                     allowfullscreen></iframe>
+               </div>
+            </div>
+         </div>
+      </div>
+   -->
+   <section id="downloads" class="">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-10 mx-auto">
+               <h2>Downloads</h2> <br>
+               <h2 class="img-wide text-center">
+                  <a class="publink" href="" target="_blank" style="text-decoration: none"> Paper <i
+                        class="fa fa-print"></i></a>
+                  &nbsp;&nbsp;
+                  <a class="publink" href="" target="_blank" style="text-decoration: none"> Code <i
+                        class="fa fa-github"></i></a>
+                  &nbsp;&nbsp;
+               </h2>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+
+   <section id="citation" class="">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-10 mx-auto">
+               <h2 class="section-title-tc">Citation</h2>
+               <br>
+               <a class="publink" target="_blank" href=""><b>
+                     Context-Aware Sequence Alignment using 4D Skeletal Augmentation</b><br></a>
+               Taein Kwon, Bugra Tekin, Siyu Tang, Marc Pollefeys<br>
+               Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2022
+               <br><br>
+               <pre style="display: block; background-color: #f5f5f5; border: 1px solid #ccc; border-radius: 4px">
+@inproceedings{Kwon:CVPR:2022,
+   title = {Context-Aware Sequence Alignment using 4D Skeletal Augmentation},
+   author = {Kwon, Taein and Tekin, Bugra and Tang, Siyu and Pollefeys Marc},
+   booktitle = {Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+   year = {2022}
+}</pre>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+
+
+   <section id="team" class="team-section">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-10 mx-auto">
+               <h2 class="section-title-tc">Team</h2>
+               <div class="text-center">
+                  <table>
+                     <tr>
+                        <th> <img src="images/teams/taein.jpg" width="175" height="175" border="0"> </th>
+                        <th> <img src="images/teams/bugra.png" width="175" height="175" border="0"> </th>
+                        <th> <img src="images/teams/siyu.jpg" width="175" height="175" border="0"> </th>
+                        <th> <img src="images/teams/marc.jpg" width="175" height="175" border="0"> </th>
+                     </tr>
+
+                     <tr>
+                        <td> Taein Kwon </td>
+                        <td> Bugra Tekin </td>
+                        <td> Siyu Tang </td>
+                        <td> Marc Pollefeys </td>
+                  </table>
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="contact" class="">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-10 mx-auto">
+               <h2>Contact</h2>
+               <br>For questions, please contact Taein Kwon:<br><a
+                  href="mailto:taein.kwon@inf.ethz.ch">taein.kwon@inf.ethz.ch</a>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+
+
+
+
+
+
+
+   <!-- Footer -->
+   <footer class="py-5 bg-dark">
+      <div class="container">
+         <p class="m-0 text-center text-white">Copyright &copy; ETH Zurich 2022</p>
+      </div>
+      <!-- /.container -->
+   </footer>
+   <!-- Bootstrap core JavaScript -->
+   <script src="vendor/jquery/jquery.min.js"></script>
+   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <!-- Plugin JavaScript -->
+   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+   <!-- Custom JavaScript for this theme -->
+   <script src="js/scrolling-nav.js"></script>
+</body>
+
+</html>

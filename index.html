@@ -1,0 +1,364 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Taein Kwon</title>
+
+  <meta name="author" content="Taein Kwon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+  <table
+    style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr style="padding:0px">
+                <td style="padding:2.5%;width:63%;vertical-align:middle">
+                  <p style="text-align:center">
+                    <name>Taein Kwon</name>
+                  </p>
+                  <p>I am a Ph.D. student at the <a href="http://www.cvg.ethz.ch/">Computer Vision and Geometry
+                      Group</a>, ETH Zurich under the supervision of
+                    <a href="http://people.inf.ethz.ch/pomarc/">Prof. Marc Pollefeys</a>.
+                  </p>
+                  <p>
+                    My research interests are Action Recognition, Egocentric Vision, Multimodal Human-AI Interaction,
+                    Mixed Reality and
+                    Computer Vision.
+                  </p>
+                  <p>
+                    Previously, at UCLA, I graduated with an M.S. in Electrical and Computer Engineering. Also, I
+                    received my B.S. in
+                    Electrical Engineering from Yonsei University, Seoul, Korea
+                  </p>
+
+                  <p style="text-align:center">
+                    <a href="mailto:taein.kwon@inf.ethz.ch">Email</a> &nbsp/&nbsp
+                    <a href="https://www.linkedin.com/in/taein-kwon-91022192/">LinkedIn</a> &nbsp/&nbsp
+                    <a href="data/TaeinKwon_CV.pdf">CV</a> &nbsp/&nbsp
+                    <a href="https://scholar.google.com/citations?user=opM0MYEAAAAJ&hl=en">Google Scholar</a>
+                    &nbsp/&nbsp
+                    <a href="https://twitter.com/big_stamp">Twitter</a> &nbsp/&nbsp
+                    <a href="https://github.com/taeinkwon">Github</a>
+                  </p>
+                </td>
+                <td style="padding:2.5%;width:40%;max-width:40%">
+                  <a href="images/TaeinKwon.jpg"><img style="width:100%;max-width:100%" alt="profile photo"
+                      src="images/TaeinKwon.jpg" class="hoverZoomLink"></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>Research</heading>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+
+              <tr onmouseout="nerfsuper_stop()" onmouseover="nerfsuper_start()">
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='nerfsuper_image'><video width=100% height=100% muted autoplay loop>
+                        <source src="images/nerf_supervision.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video></div>
+                    <img src='images/casa.png' width="160">
+                  </div>
+                  <script type="text/javascript">
+                    function nerfsuper_start() {
+                      document.getElementById('nerfsuper_image').style.opacity = "1";
+                    }
+
+                    function nerfsuper_stop() {
+                      document.getElementById('nerfsuper_image').style.opacity = "0";
+                    }
+                    nerfsuper_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <a href="projects/casa/">
+                    <papertitle>Context-Aware Sequence Alignment using 4D Skeletal Augmentation
+                    </papertitle>
+                  </a>
+                  <br>
+                  <strong>Taein Kwon</strong>,
+                  <a href="https://btekin.github.io/">Bugra Tekin</a>,
+                  <a href="https://inf.ethz.ch/people/person-detail.MjYyNzgw.TGlzdC8zMDQsLTg3NDc3NjI0MQ==.html">Siyu
+                    Tang</a>,
+                  <a href="http://people.inf.ethz.ch/pomarc/">Marc Pollefeys</a>
+                  <br>
+                  <em>CVPR</em>, 2022&nbsp<font color="red"><strong>(Oral Presentation)</strong></font>
+                  <br>
+                  <a href="projects/casa/">project page</a>
+                  <p></p>
+                  <p>Based on off-the-shelf human pose estimators, we propose a novel context-aware self-supervised
+                    learning architecture to
+                    align sequences of actions.</p>
+                </td>
+              </tr>
+
+
+              <tr onmouseout="mip360_stop()" onmouseover="mip360_start()" bgcolor="#ffffd0">
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='mip360_image'><video width=100% height=100% muted autoplay loop>
+                        <source src="images/mip360_sat.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video></div>
+                    <img src='images/h2o.png' width="160">
+                  </div>
+                  <script type="text/javascript">
+                    function mip360_start() {
+                      document.getElementById('mip360_image').style.opacity = "1";
+                    }
+
+                    function mip360_stop() {
+                      document.getElementById('mip360_image').style.opacity = "0";
+                    }
+                    mip360_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <a href="projects/h2o/">
+                    <papertitle>H2O: Two Hands Manipulating Objects for First Person Interaction Recognition
+                    </papertitle>
+                  </a>
+                  <br>
+                  <strong>Taein Kwon</strong>,
+                  <a href="https://btekin.github.io/">Bugra Tekin</a>,
+                  <a href="https://scholar.google.com/citations?user=pGukv5YAAAAJ&hl=en">Jan Stuhmer</a>,
+                  <a href="https://scholar.google.com/citations?user=1WYrlLkAAAAJ&hl=en">Federica Bogo</a>,
+                  <a href="http://people.inf.ethz.ch/pomarc/">Marc Pollefeys</a>
+                  <br>
+                  <em>ICCV</em>, 2022
+                  <br>
+                  <a href="projects/h2o/">project page</a>
+                  /
+                  <a href="https://arxiv.org/abs/2104.11181">arXiv</a>
+                  /
+                  <a href="https://www.youtube.com/watch?v=ZGobBcsxmYQ">video</a>
+                  <p></p>
+                  <p>Our dataset, called H2O (2 Hands and Objects), provides synchronized multi-view RGB-D images,
+                    interaction labels, object
+                    classes, ground-truth 3D poses for left & right hands, 6D object poses, ground-truth camera poses,
+                    object meshes and
+                    scene point clouds.</p>
+                </td>
+              </tr>
+
+
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/picfridge.png" alt="clean-usnob" width="160" height="100">
+                </td>
+                <td width="75%" valign="middle">
+                  <papertitle>Smart Refrigerator for Healthcare Using Food Image Classification
+                  </papertitle>
+                  <br>
+                  <strong>Taein Kwon</strong>,
+                  <a href="https://scholar.google.co.kr/citations?user=u--k3DcAAAAJ&hl=en">Eunjeong Park</a>,
+                  <a href="https://scholar.google.com/citations?user=Dkui5LsAAAAJ&hl=en">Hyukjae Chang</a>
+                  <br>
+                  <em>ACM BCB</em>, 2016
+                  <br>
+                  <a href="https://dl.acm.org/doi/10.1145/2975167.2985644">paper</a>
+                  <p> We propose a sensor-equipped food container, Smart Refrigerator, which discriminates foods and
+                    monitors their status.</p>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td>
+                  <heading>Teaching</heading>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table width="100%" align="center" border="0" cellpadding="20">
+            <tbody>
+
+              <tr>
+
+                <td width="100%" valign="center">
+                  Teaching Assistant
+                  <ul>
+                    <li><a href="http://cvg.ethz.ch/teaching/mrlab/">Mixed Reality [2019-Present]</a></li>
+                    <br>
+                    <li><a href="http://cvg.ethz.ch/teaching/3dvision/">3D Vision [2019-Present]</a></li>
+                    <br>
+                    <li><a href="http://cvg.ethz.ch/teaching/compvis/">Computer Vision [2018]</a></li>
+                    <br>
+                    <li>AI and new media [2018]</li>
+                    <br>
+                    <li>Intermediate Programming [2017]</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+                <tbody>
+                  <tr>
+                    <td>
+                      <heading>Awards and Talks</heading>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table width="100%" align="center" border="0" cellpadding="20">
+                <tbody>
+
+                  <tr>
+                    <td width="100%" valign="center">
+                      <strong>Awards</strong>
+                      <ul>
+
+                        <li>Scholarship, Recipient of Korean Government Scholarship from NIIED 2018</li>
+                        <br>
+                        <li>Scholarship, Yonsei International Foundation 2016</li>
+                        <br>
+                        <li>IBM Innovation Prize, Startup Weekend, Technology Competition 2015</li>
+                        <br>
+                        <li>Best Technology Prize, Internet of Things (IoT) Hackathon by the government of Korea 2014
+                        </li>
+                        <br>
+                        <li>Best Laboratory Intern, Yonsei Institute of Information and Communication Technology 2014
+                        </li>
+                        <br>
+                        <li>Scholarship, Yonsei University Foundation 2014, 2010</li>
+                        <br>
+                        <li>Creative Prize, Startup Competition, Yonsei University 2014</li>
+                        <br>
+                        <li>Scholarship, Korean Telecom Group Foundation 2011</li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td width="100%" valign="center">
+                      <strong>Talks</strong>
+                      <ul>
+                        <li>2022/03/30: Context-Aware Sequence Alignment using 4D Skeletal Augmentation. Applied Machine
+                          Learning Days (AMLD) @EPFL
+                          & Swiss JRC [<a
+                            href="https://appliedmldays.org/events/amld-epfl-2022/talks/context-aware-sequence-alignment-using-4d-skeletal-augmentation">Link</a>]
+                        </li>
+                        <br>
+                        <li>2021/10/17: H2O: Two Hands Manipulating Objects for First Person Interaction Recognition.
+                          ICCV 2021 Workshop on
+                          Egocentric Perception, Interaction and Computing (EPIC) [<a
+                            href="https://eyewear-computing.org/EPIC_ICCV21/program">Link</a>|<a
+                            href="https://www.youtube.com/watch?v=kNNuU1CKZPw&t=13632s">Video</a>]</li>
+                        <br>
+                        <li>2021/04/20: H2O: Two Hands Manipulating Objects for First Person Interaction Recognition.
+                          Swiss Joint Research Center
+                          (JRC) Workshop 2021 [<a
+                            href="https://www.microsoft.com/en-us/research/event/joint-research-centre-workshop-2021/computer-vision/">Link</a>|<a
+                            href="https://www.microsoft.com/en-us/research/video/h2o-two-hands-manipulating-objects-for-first-person-interaction-recognition-jrc-workshop-2021/">Video</a>]
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+
+
+                  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <heading>Academic Service</heading>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table width="100%" align="center" border="0" cellpadding="20">
+                    <tbody>
+
+                      <tr>
+                        <td width="100%" valign="center">
+
+                          Organizer: KSAE Open Seminar @ ETH Zurich
+                          <br><br>
+
+                          Reviwer: Siggraph
+                        </td>
+                      </tr>
+
+                      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <heading>Contact</heading>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table width="100%" align="center" border="0" cellpadding="20">
+                        <tbody>
+
+                          <tr>
+                            <td width="100%" valign="center">
+
+                              Dept. of Computer Science
+                              <br><br>
+                              ETH Zurich
+                              <br><br>
+                              CNB G 85.2
+                              <br><br>
+                              Universitatstrasse 6
+                              <br><br>
+                              CH-8092 Zurich, Switzerland
+                              <br><br>
+                              Tel: +41 (0)44 63 26 360
+                              <br><br>
+                              taein.kwon@inf (dot) ethz (dot) ch
+                            </td>
+                          </tr>
+
+
+
+
+                        </tbody>
+                      </table>
+                      <table
+                        style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                        <tbody>
+                          <tr>
+                            <td style="padding:0px">
+                              <br>
+                              <p style="text-align:right;font-size:small;">
+
+                                Website template from <a href="https://jonbarron.info/">Jon Barron</a>.
+                              </p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+        </td>
+      </tr>
+  </table>
+</body>
+
+</html>
