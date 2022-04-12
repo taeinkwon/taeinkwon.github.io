@@ -9,7 +9,7 @@
    <meta name="keywords"
       content="video alignment; self-supervised learning; transformer; pose alignment; 3D scene; deep learning; 3D vision; computer vision;">
    <meta name="author" content="Taein Kwon">
-   <title>[CVPR 2022] Context-Aware Sequence Alignment using 4D Skeletal Augmentation</title>
+   <title>[ICCV 2021] H2O: Two Hands Manipulating Objects for First Person Interaction Recognition</title>
 
    <!--<meta property="og:title" content="[ICCV 2021] LEMO: ..." />-->
    <!--<meta property="og:description" content="LEMO is a ... ">-->
@@ -35,7 +35,7 @@
    <!-- Navigation -->
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       <div class="container">
-         <a class="navbar-brand js-scroll-trigger" href="#page-top">CASA</a>
+         <a class="navbar-brand js-scroll-trigger" href="#page-top">H2O</a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -65,8 +65,8 @@
 
    <header class="bg-light text-black">
       <div class="container text-center">
-         <h1>CASA </h1>
-         <h2>Context-Aware Sequence Alignment using 4D Skeletal Augmentation</h2><br>
+         <!--<h1>H2O </h1>-->
+         <h2>H2O: Two Hands Manipulating Objects for First Person Interaction Recognition</h2><br>
          <!--<p class="lead"><i>LEMO is a method to learn motion priors ...</i></p> -->
          <div id="content">
             <div id="content-inner">
@@ -78,8 +78,10 @@
                         <a href="https://www.taeinkwon.com">Taein
                            Kwon</a><sup>1</sup>&nbsp;
                         <a href="https://btekin.github.io/">Bugra Tekin</a><sup>2</sup>&nbsp;
-                        <a href="https://vlg.inf.ethz.ch/people/person-detail.siyutang.html">Siyu
-                           Tang</a><sup>1</sup>&nbsp;
+                        <a href="https://scholar.google.com/citations?user=pGukv5YAAAAJ&hl=en">Jan
+                           Stuhmer</a><sup>2</sup>&nbsp;
+                        <a href="https://scholar.google.com/citations?user=1WYrlLkAAAAJ&hl=en">Federica
+                           Bogo</a><sup>2</sup>&nbsp;
                         <a href="https://people.inf.ethz.ch/pomarc/">Marc Pollefeys</a><sup>1,2</sup>&nbsp;
 
                         <h5>
@@ -87,27 +89,30 @@
 
                   <div class="affiliations">
                      <h5>
-                        <sup>1</sup><a href="https://inf.ethz.ch/">Department of Computer Science, ETH
+                        <sup>1</sup><a href="https://inf.ethz.ch/">ETH
                            Zurich</a>&nbsp;
                         <sup>2</sup><a
-                           href="https://www.microsoft.com/en-us/research/lab/mixed-reality-ai-zurich/">Microsoft MR &
-                           AI Lab,
-                           Zurich<br></a>
+                           href="https://www.microsoft.com/en-us/research/lab/mixed-reality-ai-zurich/">Microsoft<br></a>
                         <h5>
                   </div>
 
                   <div class="venue">
-                     <h5>IEEE Conference on Computer Vision and Pattern Recognition(<a
-                           href="http://cvpr2022.thecvf.com/" target="_blank">CVPR</a>) 2022 (Oral)<h5>
+                     <h5>International Conference on Computer Vision(<a href="http://iccv2021.thecvf.com/"
+                           target="_blank">ICCV</a>) 2021<h5>
                   </div>
 
                   <div class="downloads">
                      <br>
                      <h3>
-                        <a class="publink" href="" target="_blank" style="text-decoration: none"> Paper <i
-                              class="fa fa-print"></i></a> &nbsp;&nbsp;
-                        <a class="publink" href="" target="_blank" style="text-decoration: none"> Code <i
-                              class="fa fa-github"></i></a> &nbsp;&nbsp;
+                        <a class="publink" href="https://arxiv.org/abs/2104.11181" target="_blank"
+                           style="text-decoration: none"> Paper <i class="fa fa-print"></i></a> &nbsp;&nbsp;
+                        <a class="publink" href="https://github.com/taeinkwon/h2odataset" target="_blank"
+                           style="text-decoration: none"> Github <i class="fa fa-github"></i></a>
+                        &nbsp;&nbsp;
+                        <a class="publink" href="https://h2odataset.ethz.ch/" target="_blank"
+                           style="text-decoration: none"> Dataset <i class="fa fa-database"></i></a>&nbsp;&nbsp;
+                        <a class="publink" href="https://competitions.codalab.org/competitions/34473" target="_blank"
+                           style="text-decoration: none"> Challenge <i class="fa fa-bolt"></i></a>
                         <h3>
                   </div>
 
@@ -136,29 +141,31 @@
                <br><br>
                <h2>Abstract</h2>
                <p class="lead text-justify">
-                  Temporal alignment of fine-grained human actions in videos is important for numerous applications in
-                  computer vision,
-                  robotics, and mixed reality. State-of-the-art methods directly learn image-based embedding space by
-                  leveraging powerful
-                  deep convolutional neural networks. While being straightforward, their results are far from
-                  satisfactory, the aligned
-                  videos exhibit severe temporal discontinuity without additional post-processing steps. The recent
-                  advancements in human
-                  body and hand pose estimation in the wild promise new ways of addressing the task of human action
-                  alignment in videos.
-                  In this work, based on off-the-shelf human pose estimators, we propose a novel context-aware
-                  self-supervised learning
-                  architecture to align sequences of actions. We name it CASA. Specifically, CASA employs self-attention
-                  and
-                  cross-attention mechanisms to incorporate the spatial and temporal context of human actions, which can
-                  solve the
-                  temporal discontinuity problem. Moreover, we introduce a self-supervised learning scheme that is
-                  empowered by novel 4D
-                  augmentation techniques for 3D skeleton representations. We systematically evaluate the key components
-                  of our method.
-                  Our experiments on three public datasets demonstrate CASA significantly improves phase progress and
-                  Kendall's Tau scores
-                  over the previous state-of-the-art methods.
+                  We present, for the first time, a comprehensive framework for egocentric interaction recognition using
+                  markerless 3D
+                  annotations of two hands manipulating objects. To this end, we propose a method to create a unified
+                  dataset for
+                  egocentric 3D interaction recognition. Our method produces annotations of the 3D pose of two hands and
+                  the 6D pose of
+                  the manipulated objects, along with their interaction labels for each frame. Our dataset, called H2O
+                  (2 Hands and
+                  Objects), provides synchronized multi-view RGB-D images, interaction labels, object classes,
+                  ground-truth 3D poses for
+                  left & right hands, 6D object poses, ground-truth camera poses, object meshes and scene point clouds.
+                  To the best of our
+                  knowledge, this is the first benchmark that enables the study of first-person actions with the use of
+                  the pose of both
+                  left and right hands manipulating objects and presents an unprecedented level of detail for egocentric
+                  3D interaction
+                  recognition. We further propose the first method to predict interaction classes by estimating the 3D
+                  pose of two hands
+                  and the 6D pose of the manipulated objects, jointly from RGB images. Our method models both inter- and
+                  intra-dependencies between both hands and objects by learning the topology of a graph convolutional
+                  network that
+                  predicts interactions. We show that our method facilitated by this dataset establishes a strong
+                  baseline for joint
+                  hand-object pose estimation and achieves state-of-the-art accuracy for first person interaction
+                  recognition.
                </p>
                <!--<p class="lead text-justify">
                       where linear blend skinning (LBS) functions are usually applied to drive the deformation of a human body from a canonical space to a posed space.  -->
@@ -183,15 +190,13 @@
                   <p><img class="img-fluid" alt="method overview" src="images/pipeline.png"></p>
                </div>
                <p class="lead text-justify">
-                  The proposed framework takes as input a skeleton sequence S<sub>k</sub> along with its
-                  spatio-temporally
-                  augmented version S′<sub>k</sub>. Both sequences are encoded by temporal positional encodings.
-                  Self- and cross-attentional layers learn contextual information within and across sequences with the
-                  help of temporal positional encoding.
-                  We employ a projection head to improve our representation quality.
-                  We use a contrastive regression loss that matches a pose sequence with its 4D augmented version. For
-                  the
-                  downstream tasks and alignment, we use the embeddings before the projection head stage.
+                  (a) We calibrate cameras using IR sphere markers and PnP, (b) create object meshes using BADSLAM
+                  on RGB-D
+                  captures, and (c) estimate object poses using DenseFusion on RGB-D images and mask images from Mask
+                  R-CNN. We
+                  then select the pose with the highest confidence among five cameras. (d) Consequently, we detect hand
+                  joints with OpenPose
+                  and optimize hand shape. (e) We finally detect and smooth temporally inaccurate poses.
                </p>
 
                <!-- <h4>Use-case</h4> -->
@@ -216,10 +221,10 @@
             <div class="col-lg-10 mx-auto">
 
                <h2 class="section-title-tc">Video</h2>
-               Coming Soon
                <div class="embed-responsive embed-responsive-16by9">
 
-                  <iframe class="embed-responsive-item" src="" title="" frameborder="0"
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZGobBcsxmYQ" title="H2O"
+                     frameborder="0"
                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                      allowfullscreen></iframe>
                </div>
@@ -251,12 +256,16 @@
             <div class="col-lg-10 mx-auto">
                <h2>Downloads</h2> <br>
                <h2 class="img-wide text-center">
-                  <a class="publink" href="" target="_blank" style="text-decoration: none"> Paper <i
-                        class="fa fa-print"></i></a>
+                  <a class="publink" href="https://arxiv.org/abs/2104.11181" target="_blank"
+                     style="text-decoration: none"> Paper <i class="fa fa-print"></i></a> &nbsp;&nbsp;
+                  <a class="publink" href="https://github.com/taeinkwon/h2odataset" target="_blank"
+                     style="text-decoration: none"> Github <i class="fa fa-github"></i></a>
                   &nbsp;&nbsp;
-                  <a class="publink" href="" target="_blank" style="text-decoration: none"> Code <i
-                        class="fa fa-github"></i></a>
-                  &nbsp;&nbsp;
+                  <a class="publink" href="https://h2odataset.ethz.ch/" target="_blank" style="text-decoration: none">
+                     Dataset <i class="fa fa-database"></i></a>&nbsp;&nbsp;
+
+                  <a class="publink" href="https://competitions.codalab.org/competitions/34473" target="_blank"
+                     style="text-decoration: none"> Challenge <i class="fa fa-bolt"></i></a>&nbsp;&nbsp;
                </h2>
             </div>
          </div>
@@ -272,16 +281,20 @@
                <h2 class="section-title-tc">Citation</h2>
                <br>
                <a class="publink" target="_blank" href=""><b>
-                     Context-Aware Sequence Alignment using 4D Skeletal Augmentation</b><br></a>
-               Taein Kwon, Bugra Tekin, Siyu Tang, Marc Pollefeys<br>
-               Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2022
+                     H2O: Two Hands Manipulating Objects for First Person Interaction Recognition</b><br></a>
+               Taein Kwon, Bugra Tekin, Jan Stuhmer, Federica Bogo, Marc Pollefeys<br>
+               Proceedings of the IEEE/CVF International Conference on Computer Vision, 2021
                <br><br>
                <pre style="display: block; background-color: #f5f5f5; border: 1px solid #ccc; border-radius: 4px">
-@inproceedings{Kwon:CVPR:2022,
-   title = {Context-Aware Sequence Alignment using 4D Skeletal Augmentation},
-   author = {Kwon, Taein and Tekin, Bugra and Tang, Siyu and Pollefeys Marc},
-   booktitle = {Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
-   year = {2022}
+@InProceedings{Kwon_2021_ICCV,
+author = {Kwon, Taein and Tekin, Bugra and St\"uhmer, Jan and Bogo, Federica and Pollefeys, Marc},
+title = {H2O: Two Hands Manipulating Objects for First Person Interaction Recognition},
+booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+month = {October},
+year = {2021},
+pages = {10138-10148}
+
+}
 }</pre>
             </div>
          </div>
@@ -301,14 +314,16 @@
                      <tr>
                         <th> <img src="images/teams/taein.jpg" width="175" height="175" border="0"> </th>
                         <th> <img src="images/teams/bugra.png" width="175" height="175" border="0"> </th>
-                        <th> <img src="images/teams/siyu.jpg" width="175" height="175" border="0"> </th>
+                        <th> <img src="images/teams/jan.jpeg" width="175" height="175" border="0"> </th>
+                        <th> <img src="images/teams/federica.jpeg" width="175" height="175" border="0"> </th>
                         <th> <img src="images/teams/marc.jpeg" width="175" height="175" border="0"> </th>
                      </tr>
 
                      <tr>
                         <td> Taein Kwon </td>
                         <td> Bugra Tekin </td>
-                        <td> Siyu Tang </td>
+                        <td> Jan Stuhmer </td>
+                        <td> Federica Bogo </td>
                         <td> Marc Pollefeys </td>
                   </table>
 
