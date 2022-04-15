@@ -177,10 +177,16 @@
                      incorporate prior knowledge about the kinematic structure
                      and plausible shape of a human body.
                   </p> -->
-               <br> <br>
+
+               <div class="img-wide text-center">
+                  <!-- <p><img class="img-fluid" alt="teaser" src="https://via.placeholder.com/1500x600"></p> -->
+                  <p><img class="w-100 img-fluid" alt="baseball_swing_all" src="images/baseball_swing_all.gif"></p>
+               </div>
+              
+               <br><br>
                <h2>Pipeline Overview</h2>
-               <div class="text-center">
-                  <p><img class="img-fluid" alt="method overview" src="images/pipeline.png"></p>
+               <div class="img-wide text-center">
+                  <p><img class="img-fluid" alt="pipeline overview" src="images/pipeline.png"></p>
                </div>
                <p class="lead text-justify">
                   The proposed framework takes as input a skeleton sequence S<sub>k</sub> along with its
@@ -194,8 +200,48 @@
                   downstream tasks and alignment, we use the embeddings before the projection head stage.
                </p>
 
-               <!-- <h4>Use-case</h4> -->
+               <br><br>
+               <h2>Video Alingment Results (without post-processing)</h2>
                <p class="lead text-justify">
+               Using an attention-based architecture, our method gathers contextual information from the whole sequence during alignment 
+               which results in superior performance than previous approaches that rely on only local context.
+            </p>
+               <div class="row">
+               <p><div class="col"><img class="w-100 img-fluid" alt="tennis forehand" src="images/tennis_forehand.gif"></div>
+                  <div class="col"><img class="w-100 img-fluid" alt="pull ups" src="images/pull_ups.gif"></div></p>
+               </div>
+               <br><br>
+               <h2>Online Video Alignment Results</h2>
+               <p class="lead text-justify">
+               Our method uses an attention-based model to capture context from all the frames to compute alignment across two
+               videos. However, for online applications, the assumption of having the full sequence will not be valid.
+               Therefore, We provide results for online sequence alignment.</p>
+               <div class="row">
+               <p><div class="col"><img class="w-100 img-fluid" alt="tennis serve online" src="images/tennis_serve_online.gif"></div>
+                  <div class="col"><img class="w-100 img-fluid" alt="baseball swing online" src="images/baseball_swing_online.gif"></div></p>
+               </div>
+               
+               
+
+               <br><br>
+               <h2>Additional Video Alignment Results</h2>
+               <p class="lead text-justify">
+               We additionally show the video alignment results on the H2O and Ikea ASM datasets.</p>
+               <div class="text-center">
+                  <p><img class="w-100 img-fluid" alt="h2o" src="images/h2o_small.gif"></p>
+                  <p><img class="w-100 img-fluid" alt="ikea" src="images/ikea.gif"></p>
+               </div>
+
+
+
+               
+            </div>
+         </div>
+      </div>
+   </section>
+
+               <!-- <h4>Use-case</h4> -->
+               <!-- <p class="lead text-justify"> -->
                   <!-- We release a pretrained LEAP model that generalizes to unseen human bodies.
                     LEAP can be easily integrated into learning pipelines that require
                      an efficient occupancy check to resolve collisions with other geometries flexibly represented as point clounds. -->
@@ -204,10 +250,11 @@
                   <!--<div class="text-center">-->
                   <!--<p><img class="img-fluid" alt="Realistic human bodies" src="images/LEAP optimization.svg"></p>-->
                   <!--</div>-->
-            </div>
-         </div>
-      </div>
-   </section>
+            
+
+
+
+         
 
    <section id="video" class="">
 
@@ -215,11 +262,10 @@
          <div class="row">
             <div class="col-lg-10 mx-auto">
 
-               <h2 class="section-title-tc">Video</h2>
-               Coming Soon
+               <h2 class="section-title-tc">Supplementary Video</h2>
                <div class="embed-responsive embed-responsive-16by9">
 
-                  <iframe class="embed-responsive-item" src="" title="" frameborder="0"
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/C7cejk232JU" title="" frameborder="0"
                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                      allowfullscreen></iframe>
                </div>
@@ -277,9 +323,9 @@
                Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2022
                <br><br>
                <pre style="display: block; background-color: #f5f5f5; border: 1px solid #ccc; border-radius: 4px">
-@inproceedings{Kwon:CVPR:2022,
+@inproceedings{Kwon_CVPR_2022,
    title = {Context-Aware Sequence Alignment using 4D Skeletal Augmentation},
-   author = {Kwon, Taein and Tekin, Bugra and Tang, Siyu and Pollefeys Marc},
+   author = {Kwon, Taein and Tekin, Bugra and Tang, Siyu and Pollefeys, Marc},
    booktitle = {Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
    year = {2022}
 }</pre>
@@ -342,6 +388,9 @@
    <footer class="py-5 bg-dark">
       <div class="container">
          <p class="m-0 text-center text-white">Copyright &copy; ETH Zurich 2022</p>
+         <p style="text-align:right;font-size:small;" class="text-white">
+            template from <a href="https://markomih.github.io/">Marko Mihajlovic</a> and <a href="https://sanweiliti.github.io/LEMO/LEMO.html">Siwei Zhang</a>.
+          </p>
       </div>
       <!-- /.container -->
    </footer>
