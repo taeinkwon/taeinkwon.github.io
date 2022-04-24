@@ -157,7 +157,12 @@
 
 
                <div class="img-wide text-center">
-                  <p><img class="w-100 img-fluid" alt="baseball_swing_all" src="images/baseball_swing_all.gif"></p>
+                  <p><img class="w-100 img-fluid" alt="baseball_swing_all" src="images/baseball_swing_8.gif">
+               Sequence alignment results (baseball swing).
+               The seven sequences are aligned with each frame (skeleton) from the reference sequence 
+               by the nearest neighbor search in our trained embedding space. </p>
+
+               
                </div>
               
                <br><br>
@@ -178,16 +183,19 @@
                </p>
 
                <br><br>
-               <h2>Video Alingment Results (without post-processing)</h2>
+               <h2>Sequence Alingment Results (without post-processing)</h2>
                <p class="lead text-justify">
                Using an attention-based architecture, our method gathers contextual information from the whole sequence during alignment 
-               which results in superior performance than previous approaches that rely on only local context.
-            </p>
+               which results in superior performance than previous approaches that rely on only local context. For online applications, 
+               the assumption of having the full sequence will not be valid. Therefore, we also provide results for online sequence alignment.
+               </p>
                <div class="row">
-               <p><div class="col"><img class="w-100 img-fluid" alt="tennis forehand" src="images/tennis_forehand.gif"></div>
-                  <div class="col"><img class="w-100 img-fluid" alt="pull ups" src="images/pull_ups.gif"></div></p>
+               <p><img class="w-100 img-fluid" alt="tennis forehand" src="images/golf_swing.gif">
+                  <img class="w-100 img-fluid" alt="pull ups" src="images/tennis_forehand_1.gif"></p>
                </div>
                <br><br>
+
+               <!--
                <h2>Online Video Alignment Results</h2>
                <p class="lead text-justify">
                Our method uses an attention-based model to capture context from all the frames to compute alignment across two
@@ -196,17 +204,17 @@
                <div class="row">
                <p><div class="col"><img class="w-100 img-fluid" alt="tennis serve online" src="images/tennis_serve_online.gif"></div>
                   <div class="col"><img class="w-100 img-fluid" alt="baseball swing online" src="images/baseball_swing_online.gif"></div></p>
-               </div>
+               </div>-->
                
                
 
                <br><br>
-               <h2>Additional Video Alignment Results</h2>
+               <h2>Additional Sequence Alignment Results</h2>
                <p class="lead text-justify">
-               We additionally show the video alignment results on the H2O and Ikea ASM datasets.</p>
+               We additionally show the sequence alignment results on the H2O dataset using hand skeletons.</p>
                <div class="text-center">
                   <p><img class="w-100 img-fluid" alt="h2o" src="images/h2o_small.gif"></p>
-                  <p><img class="w-100 img-fluid" alt="ikea" src="images/ikea.gif"></p>
+                  <!--<p><img class="w-100 img-fluid" alt="ikea" src="images/ikea.gif"></p>-->
                </div>
 
 
