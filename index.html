@@ -149,7 +149,8 @@
 
                   <p></p>
                   <p>HoloAssist is a large-scale egocentric human interaction dataset,
-                    where two people collaboratively complete physical manipulation tasks. Details to follow soon.
+                    where two people collaboratively complete physical manipulation tasks. By augmenting the data with action and conversational annotations and observing the rich behaviors of various participants, we present key insights into how human assistants correct mistakes, intervene in the task completion procedure, and ground their instructions to the environment.
+                    Details to follow soon.
                   </p>
                     * indicates equal contribution
                 </td>
@@ -189,10 +190,15 @@
                   / <a href="https://github.com/sanweiliti/EgoBody">code</a>
 
                   <p></p>
-                  <p>EgoBody is a large-scale dataset capturing ground-truth 3D human motions during social interactions
-                    in 3D scenes. Given
-                    two interacting subjects, we leverage a lightweight multi-camera rig to reconstruct their 3D shape
-                    and pose over time.</p>
+                  <!--<p>EgoBody is a large-scale dataset capturing ground-truth 3D human motions during social interactions
+                    in 3D scenes. 
+                    Given two interacting subjects, we leverage a lightweight multi-camera rig to reconstruct their 3D shape
+                    and pose over time.</p>-->
+                    <p>EgoBody is a large-scale dataset of accurate 3D human body shape, 
+                      pose and motion of humans interacting in 3D scenes, with multi-modal streams from 
+                      third-person and egocentric views, captured by Azure Kinects and a HoloLens2. 
+                      Given two interacting subjects, we leverage a lightweight multi-camera rig to 
+                      reconstruct their 3D shape and pose over time.</p>
                 </td>
               </tr>
 
@@ -240,9 +246,16 @@
                   / <a href="https://github.com/taeinkwon/casa">code</a>
 
                   <p></p>
-                  <p>Based on off-the-shelf human pose estimators, we propose a novel context-aware self-supervised
-                    learning architecture to
-                    align sequences of actions.</p>
+                  <p>
+                    <!--Based on off-the-shelf human pose estimators, we propose a novel context-aware self-supervised learning architecture to align sequences of actions.-->
+                    We propose a skeletal self-supervised learning approach that uses alignment as a pretext task. 
+                    Our approach to alignment relies on a context-aware attention model that incorporates spatial 
+                    and temporal context within and across sequences and a contrastive learning formulation that 
+                    relies on 4D skeletal augmentations. Pose data provides a valuable cue for alignment and 
+                    downstream tasks, such as phase classification and phase progression, as it is robust 
+                    to different camera angles and changes in the background, while being efficient for real-time 
+                    processing.
+                  </p>
                 </td>
               </tr>
 
@@ -289,12 +302,18 @@
                   /
                   <a href="https://www.youtube.com/watch?v=ZGobBcsxmYQ">video</a>
                   <p></p>
-                  <p>Our dataset, called H2O (2 Hands and Objects), provides synchronized multi-view RGB-D images,
+                  <p><!--Our dataset, called H2O (2 Hands and Objects), provides synchronized multi-view RGB-D images,
                     interaction labels, object
                     classes, ground-truth 3D poses for left & right hands, 6D object poses, ground-truth camera poses,
                     object meshes and
-                    scene point clouds.</p>
-                </td>
+                    scene point clouds. We further propose the first method to jointly recognize the 3D poses of two hands manipulating objects and a novel topology-aware graph convolutional network for recognizing hand-object interactions.</p>
+                  -->
+                    In this paper, we propose a method to collect a dataset of two hands manipulating objects for 
+                    first person interaction recognition. We provide a rich set of annotations including action labels, 
+                    object classes, 3D left & right hand poses, 6D object poses, camera poses and scene point clouds.
+                     We further propose the first method to jointly recognize the 3D poses of two hands manipulating 
+                     objects and a novel topology-aware graph convolutional network for recognizing hand-object interactions.
+                  </td>
               </tr>
 
 
@@ -317,8 +336,9 @@
                   <br>
                   <em>ACM BCB</em>, 2016
                   <br>
-                  <p> We propose a sensor-equipped food container, Smart Refrigerator, which discriminates foods and
-                    monitors their status.</p>
+                  <p> We propose a sensor-equipped food container, Smart Refrigerator, which recognizes foods and
+                    monitors their status. We demonstrated the performance in detection of food and suggested that 
+                    automatic monitoring of food intake can provide intuitive feedback to users.</p>
                 </td>
               </tr>
 
