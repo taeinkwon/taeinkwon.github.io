@@ -139,35 +139,35 @@ These findings demonstrate the effectiveness of our method and highlight its pot
                </p>
 
 
-               <div class="img-wide text-center">
-                  <p><img class="w-100 img-fluid" alt="two-hands-fingerspelling" src="images/alph.png">
-                     BSL alphabet. Unlike many other sign languages, British Sign Language (BSL) employs bi-manual fingerspelling, which poses additional challenges for recognition due to frequent occlusions between the two hands. </p>
+                  <p><img class="w-100 img-fluid" alt="two-hands-fingerspelling" src="images/alph.png"></p>
+                     BSL alphabet. Unlike many other sign languages, British Sign Language (BSL) employs bi-manual fingerspelling, which poses additional challenges for recognition due to frequent occlusions between the two hands.
 
 
-               </div>
-
+             
+               <div class="img-wide text-center"></div>
                <h2>FS23K Dataset</h2>
+                <p><img class="w-100 img-fluid" alt="dataset_construction" src="images/dataset_construction.png"></p>
+                    Dataset Construction. To construct FS23K, we employ a multi-stage iterative annotation strategy. Starting from a small set of strong annotations from the CSLR fingerspelling training set, we progressively re-annotate noisy pseudo annotations from the Transpeller dataset. 
+    During this iterative process, increasingly reliable annotations are accepted as the classifier improves through training on the expanding dataset.
+                             </div>
 
-               <h2>Pipeline</h2>
+    <h2>Pipeline</h2>
 
-               <div class="img-wide text-center">
                   <p><img class="w-100 img-fluid" alt="pipeline" src="images/pipeline2.png">
                      Fingerspelling recognition network architecture. The model leverages two complementary feature modalities: lip features extracted using AUTO-AVSR and hand features obtained from HAMER. 
     Each modality is first passed through an individual linear projection to align feature dimensions, followed by separate Transformer encoders. 
     The encoded features are then concatenated and further processed by a Transformer encoder. 
     Finally, a two-layer MLP predicts per-frame letter labels, which are also used as inputs to the CTC decoder. The dimensions are shown in the numbers beside the arrows. The 384 dimensional hand features cover the vector dimension for both hands.
-
-               </div>
+            
 
 
                <h2>Results</h2>
-               <div class="img-wide text-center">
                   <p><img class="w-100 img-fluid" alt="result" src="images/results.png">
                      Example correct fingerspelling predictions.
 Top: a subset of the video frames with corresponding letters.
 Bottom: full-word predictions from Transpeller and our model with character error rates (CER).
 Colours indicate correct letters (<span style="color: green;">green</span>), substitutions (<span style="color: red;">red</span>), and insertions/deletions (<span style="color: blue;">blue</span>).
-               </div>
+     
 
             </div>
          </div>
