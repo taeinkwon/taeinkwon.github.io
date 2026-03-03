@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description"
+      content="We propose CASA: Context-Aware Sequence Alignment using 4D Skeletal Augmentation. Based on off-the-shelf human pose estimators, we propose a novel context-aware self-supervised learning architecture to align sequences of actions.">
+   <meta name="keywords"
+      content="video alignment; self-supervised learning; transformer; pose alignment; 3D scene; deep learning; 3D vision; computer vision;">
+   <meta name="author" content="Taein Kwon">
+   <title>Recognising BSL Fingerspelling in Continuous Signing Sequences </title>
+
+
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:title" content="[CVPR 2022] Context-Aware Sequence Alignment using 4D Skeletal Augmentation" />
+   <meta name="twitter:description"
+      content="Based on off-the-shelf human pose estimators, we propose a novel context-aware self-supervised learning architecture to align sequences of actions." />
+   <meta name="twitter:image" content="https://taeinkwon.github.io/projects/CASA/images/baseball_swing_all.gif" />
+   <meta name="twitter:image:alt" content="CASA CVPR 2022" />
+
+   <!-- Bootstrap core CSS -->
+   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Custom styles for this template -->
+   <link href="css/scrolling-nav.css" rel="stylesheet">
+   <!-- nice figures  -->
+   <!--<link rel="stylesheet" href="css/font-awesome.css">-->
+   <!--<link rel="icon" type="image/png" href="images/favicon.png">-->
+
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FKCZFTHTJN"></script>
+   <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+
+   gtag('config', 'G-FKCZFTHTJN');
+   </script>
+</head>
+
+<body id="page-top">
+   <!-- Navigation -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+         <a class="navbar-brand js-scroll-trigger" href="#page-top">CASA</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#about">About</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#video">Video</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#downloads">Downloads</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#citation">Citation</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+
+   <header class="bg-light text-black">
+      <div class="container text-center">
+         <h1>FS23K </h1>
+         <h2>Recognising BSL Fingerspelling in Continuous Signing Sequences</h2><br>
+         <div id="content">
+            <div id="content-inner">
+
+               <div class="section head">
+
+                  <div class="authors">
+                     <h5>
+                        <a href="">Alyssa Chan</a><sup>1*</sup>&nbsp;
+                        <a href="https://www.taeinkwon.com">Taein Kwon</a><sup>1*</sup>&nbsp;
+
+                        <a href="https://www.robots.ox.ac.uk/~az/">Andrew Zisserman</a><sup>1</sup>&nbsp;
+
+                        <h5>
+                  </div>
+
+                  <div class="affiliations">
+                     <h5>
+                        <sup>1</sup><a href="https://www.robots.ox.ac.uk/~vgg/index.html/">VGG, University of Oxford</a>&nbsp;
+                        <h5>
+                  </div>
+
+
+                  <div class="downloads">
+                     <br>
+                     <h3>
+                        <a class="publink" href="" target="_blank"
+                           style="text-decoration: none"> Paper <i class="fa fa-print"></i></a> &nbsp;&nbsp;
+                        <a class="publink" href="" target="_blank"
+                           style="text-decoration: none"> Code <i class="fa fa-github"></i></a> &nbsp;&nbsp;
+                           <a class="publink" href="" target="_blank"
+                           style="text-decoration: none"> Dataset <i class="fa fa-database"></i></a>&nbsp;&nbsp;
+                        <h3>
+                  </div>
+
+               </div>
+
+
+               <!-- <br> -->
+
+
+            </div>
+   </header>
+
+
+   <section id="about" class="about-section">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-10 mx-auto">
+               <p class="lead text-justify">
+               </p>
+               <br> <br>
+               <div class="img-wide text-center">
+                  <p><img class="img-fluid" alt="teaser" src="images/teasor_img.png"></p>
+               </div>
+               <br><br>
+               <h2>Abstract</h2>
+               <p class="lead text-justify">
+Fingerspelling is a critical component of British Sign Language (BSL), used to spell proper names, technical terms, and words that lack established lexical signs. 
+Fingerspelling recognition is challenging due to the rapid pace of signing and common letter omissions by native signers, while existing BSL fingerspelling datasets are either small in scale or temporally and letter-wise inaccurate.
+In this work, we introduce a new large-scale BSL fingerspelling dataset, FS23K, constructed using an iterative annotation framework. In addition, we propose a fingerspelling recognition model that explicitly accounts for bi-manual interactions and mouthing cues. As a result, with refined annotations, 
+our approach halves the character error rate (CER) compared to the prior state of the art on fingerspelling recognition.
+These findings demonstrate the effectiveness of our method and highlight its potential to support future research in sign language understanding and scalable, automated annotation pipelines. The dataset, code, and trained models will be released upon acceptance.
+               </p>
+
+
+               <div class="img-wide text-center">
+                  <p><img class="w-100 img-fluid" alt="two-hands-fingerspelling" src="images/alph.png">
+                     BSL alphabet. Unlike many other sign languages, British Sign Language (BSL) employs bi-manual fingerspelling, which poses additional challenges for recognition due to frequent occlusions between the two hands. </p>
+
+
+               </div>
+
+
+
+               <div class="img-wide text-center">
+                  <p><img class="w-100 img-fluid" alt="pipeline" src="images/pipeline2.png">
+                     Fingerspelling recognition network architecture. The model leverages two complementary feature modalities: lip features extracted using AUTO-AVSR and hand features obtained from HAMER. 
+    Each modality is first passed through an individual linear projection to align feature dimensions, followed by separate Transformer encoders. 
+    The encoded features are then concatenated and further processed by a Transformer encoder. 
+    Finally, a two-layer MLP predicts per-frame letter labels, which are also used as inputs to the CTC decoder. The dimensions are shown in the numbers beside the arrows. The 384 dimensional hand features cover the vector dimension for both hands.
+
+               </div>
+
+
+
+               <div class="img-wide text-center">
+                  <p><img class="w-100 img-fluid" alt="result" src="images/results.png">
+                     Example correct fingerspelling predictions.
+Top: a subset of the video frames with corresponding letters.
+Bottom: full-word predictions from Transpeller and our model with character error rates (CER).
+Colours indicate correct letters (<span style="color: green;">green</span>), substitutions (<span style="color: red;">red</span>), and insertions/deletions (<span style="color: blue;">blue</span>).
+               </div>
+
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+
+
+
+
+   <section id="video" class="">
+
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-10 mx-auto">
+               <h2 class="section-title-tc">Video</h2>
+               <div class="embed-responsive embed-responsive-16by9">
+
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7-ATWx7BOo0" title=""
+                     frameborder="0"
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                     allowfullscreen></iframe>
+               </div> <br>
+
+
+               <h2 class="section-title-tc">Supplementary Video</h2>
+               <div class="embed-responsive embed-responsive-16by9">
+
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/C7cejk232JU" title=""
+                     frameborder="0"
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                     allowfullscreen></iframe>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+   <section id="downloads" class="">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-10 mx-auto">
+               <h2>Downloads</h2> <br>
+               <h2 class="img-wide text-center">
+                  <a class="publink" href="" target="_blank"
+                     style="text-decoration: none"> Paper <i class="fa fa-print"></i></a>
+                  &nbsp;&nbsp;
+                  <a class="publink" href="" target="_blank"
+                     style="text-decoration: none"> Code <i class="fa fa-github"></i></a>
+                  &nbsp;&nbsp;
+                  <a class="publink" href="" target="_blank"
+                        style="text-decoration: none"> Dataset <i class="fa fa-database"></i></a>&nbsp;&nbsp;
+                  &nbsp;&nbsp;
+               </h2>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+
+   <section id="citation" class="">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-10 mx-auto">
+               <h2 class="section-title-tc">Citation</h2>
+               <br>
+               <a class="publink" target="_blank" href=""><b>
+                     Recognising BSL Fingerspelling in Continuous Signing Sequencesn</b><br></a>
+               Alyssa Chan*, Taein Kwon*, Andrew Zisserman<br>
+               <span style="font-size: 0.8em;">* Co-first authors</span>
+               <br><br>
+               <pre style="display: block; background-color: #f5f5f5; border: 1px solid #ccc; border-radius: 4px">
+@InProceedings{
+}</pre>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+
+
+   <section id="team" class="team-section">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-10 mx-auto">
+               <h2 class="section-title-tc">Team</h2>
+               <div class="text-center">
+                  <table>
+                     <tr>
+                        
+                        <th> <img src="images/teams/alyssa_chan.jpg" width="175" height="175" border="0"> </th>
+                        <th> <img src="images/teams/taein.jpg" width="175" height="175" border="0"> </th>
+                        <th> <img src="images/teams/andrew_zisserman.jpg" width="175" height="175" border="0"> </th>
+                     </tr>
+
+                     <tr>
+                        <td> Alyssa Chan </td>
+                        <td> Taein Kwon </td>
+                        <td> Andrew Zisserman </td>
+                  </table>
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="contact" class="">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-10 mx-auto">
+               <h2>Contact</h2>
+               <br>For questions, please contact Alyssa Chan:<br><a
+                  href="mailto:"></a>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+
+
+
+
+
+
+
+   <!-- Footer -->
+   <footer class="py-5 bg-dark">
+      <div class="container">
+         <p class="m-0 text-center text-white">Copyright &copy; University of Oxford 2026</p>
+         <p style="text-align:right;font-size:small;" class="text-white">
+            template from <a href="https://markomih.github.io/">Marko Mihajlovic</a> and <a
+               href="https://sanweiliti.github.io/LEMO/LEMO.html">Siwei Zhang</a>
+         </p>
+      </div>
+      <!-- /.container -->
+   </footer>
+   <!-- Bootstrap core JavaScript -->
+   <script src="vendor/jquery/jquery.min.js"></script>
+   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <!-- Plugin JavaScript -->
+   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+   <!-- Custom JavaScript for this theme -->
+   <script src="js/scrolling-nav.js"></script>
+</body>
+
+</html>
