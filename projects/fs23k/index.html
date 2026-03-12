@@ -184,7 +184,7 @@ Colours indicate correct letters (<span style="color: green;">green</span>), sub
 <section id="video" class="">
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 mx-auto">
+      <div class="col-lg-10 mx-auto" >
 
         <h2 class="section-title-tc">Fingerspelling Detection</h2>
 
@@ -202,18 +202,24 @@ Colours indicate correct letters (<span style="color: green;">green</span>), sub
 
         <h2 class="section-title-tc">Fingerspelling Classification</h2>
 
-        <video width="100%" controls>
-          <source src="images/ian.mov" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <video width="100%" controls>
-          <source src="images/dioxide.mov" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <video width="100%" controls>
-          <source src="images/marshmallow.mov" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+<div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+
+  <video width="30%" controls>
+    <source src="images/ian.mov" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video width="30%" controls>
+    <source src="images/dioxide.mov" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video width="30%" controls>
+    <source src="images/marshmallow.mov" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+</div>
         Many GT word entries have 2 words present, for example DD (dioxide). In this case the bracketed word is the associated word (dioxide) and the letters are what is being spelt (DD). We also present the character error rate (CER), which is the number of substitutions, deletions and insertions required to change the predicted word into the ground truth.
       </div>
     </div>
