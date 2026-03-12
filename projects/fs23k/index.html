@@ -101,7 +101,7 @@
                      <h3>
                         <a class="publink" href="" target="_blank"
                            style="text-decoration: none"> Paper <i class="fa fa-print"></i></a> &nbsp;&nbsp;
-                        <a class="publink" href="" target="_blank"
+                        <a class="publink" href="https://github.com/chan-alyssa/Fingerspelling-Recognition/" target="_blank"
                            style="text-decoration: none"> Code <i class="fa fa-github"></i></a> &nbsp;&nbsp;
                            <a class="publink" href="" target="_blank"
                            style="text-decoration: none"> Dataset <i class="fa fa-database"></i></a>&nbsp;&nbsp;
@@ -178,33 +178,44 @@ Colours indicate correct letters (<span style="color: green;">green</span>), sub
 
 
 
-   <section id="video" class="">
+<section id="video" class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
 
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-10 mx-auto">
-               <h2 class="section-title-tc">Video</h2>
-               <div class="embed-responsive embed-responsive-16by9">
+        <h2 class="section-title-tc">Detection</h2>
 
-                  <iframe class="embed-responsive-item" src="" title=""
-                     frameborder="0"
-                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                     allowfullscreen></iframe>
-               </div> <br>
+        <video width="100%" controls>
+          <source src="images/demo.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
 
+        <video width="100%" controls>
+          <source src="images/demo2.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        Videos depicting fingerspelling detection ground truth (blue line) and predictions (red dotted line). If fingerspelling is present, the line is at 1 and 0 if not present. The lower graph shows frame-wise predictions and the top graph shows smoothed predictions using a sliding window. The number of TP, FN and FP are shown as well. An event is considered a TP if the intersection over union (IoU) is above 0.5 and a FN otherwise.
+        <br><br>
 
-               <h2 class="section-title-tc">Supplementary Video</h2>
-               <div class="embed-responsive embed-responsive-16by9">
+        <h2 class="section-title-tc">Fingerspelling Classification</h2>
 
-                  <iframe class="embed-responsive-item" src="" title=""
-                     frameborder="0"
-                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                     allowfullscreen></iframe>
-               </div>
-            </div>
-         </div>
+        <video width="100%" controls>
+          <source src="images/ian.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video width="100%" controls>
+          <source src="images/dioxide.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video width="100%" controls>
+          <source src="images/marshmallow.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        Many GT word entries have 2 words present, for example DD (dioxide). In this case the bracketed word is the associated word (dioxide) and the letters are what is being spelt (DD). We also present the character error rate (CER), which is the number of substitutions, deletions and insertions required to change the predicted word into the ground truth.
       </div>
-   </section>
+    </div>
+  </div>
+</section>
 
 
    <section id="downloads" class="">
@@ -216,7 +227,7 @@ Colours indicate correct letters (<span style="color: green;">green</span>), sub
                   <a class="publink" href="" target="_blank"
                      style="text-decoration: none"> Paper <i class="fa fa-print"></i></a>
                   &nbsp;&nbsp;
-                  <a class="publink" href="" target="_blank"
+                  <a class="publink" href="https://github.com/chan-alyssa/Fingerspelling-Recognition/" target="_blank"
                      style="text-decoration: none"> Code <i class="fa fa-github"></i></a>
                   &nbsp;&nbsp;
                   <a class="publink" href="" target="_blank"
