@@ -145,12 +145,13 @@ These findings demonstrate the effectiveness of our method and highlight its pot
 
              
                <div class="img-wide text-center"></div>
+               <br><br>
                <h2>FS23K Dataset</h2>
                 <p><img class="w-100 img-fluid" alt="dataset_construction" src="images/dataset_construction.png"></p>
                     Dataset Construction. To construct FS23K, we employ a multi-stage iterative annotation strategy. Starting from a small set of strong annotations from the CSLR fingerspelling training set, we progressively re-annotate noisy pseudo annotations from the Transpeller dataset. 
     During this iterative process, increasingly reliable annotations are accepted as the classifier improves through training on the expanding dataset.
                             
-
+               <br><br>
          <h2>Pipeline</h2>
                   <p><img class="w-100 img-fluid" alt="pipeline" src="images/pipeline2.png"></p>
                      Fingerspelling recognition network architecture. The model leverages two complementary feature modalities: lip features extracted using AUTO-AVSR and hand features obtained from HAMER. 
@@ -159,7 +160,7 @@ These findings demonstrate the effectiveness of our method and highlight its pot
     Finally, a two-layer MLP predicts per-frame letter labels, which are also used as inputs to the CTC decoder. The dimensions are shown in the numbers beside the arrows. The 384 dimensional hand features cover the vector dimension for both hands.
             
 
-
+<br><br>
                <h2>Results</h2>
                   <p><img class="w-100 img-fluid" alt="result" src="images/results.png"></p>
                      Example correct fingerspelling predictions.
