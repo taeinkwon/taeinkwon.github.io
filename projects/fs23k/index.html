@@ -57,12 +57,13 @@
                </li>
                <li class="nav-item">
                   <a class="nav-link js-scroll-trigger" href="#downloads">Downloads</a>
-               </li>
-                  <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="#ack">Acknowledgements</a>
-               </li>
+
                <li class="nav-item">
                   <a class="nav-link js-scroll-trigger" href="#citation">Citation</a>
+               </li>
+                              </li>
+                  <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#ack">Acknowledgements</a>
                </li>
                <li class="nav-item">
                   <a class="nav-link js-scroll-trigger" href="#team">Team</a>
@@ -210,8 +211,11 @@ These findings demonstrate the effectiveness of our method and highlight its pot
                      Fingerspelling recognition network architecture. The model leverages two complementary feature modalities: lip features extracted using AUTO-AVSR and hand features obtained from HAMER. 
     Each modality is first passed through an individual linear projection to align feature dimensions, followed by separate Transformer encoders. 
     The encoded features are then concatenated and further processed by a Transformer encoder. 
-    Finally, a two-layer MLP predicts per-frame letter labels, which are also used as inputs to the CTC decoder. The dimensions are shown in the numbers beside the arrows. The 384 dimensional hand features cover the vector dimension for both hands.
-            
+    Finally, a two-layer MLP predicts per-frame letter labels, which are also used as inputs to the CTC decoder. 
+    The numbers beside the arrows indicate feature dimensions.
+    The implementation is publicly available on
+<a href="https://github.com/chan-alyssa/Fingerspelling-Recognition/" target="_blank" rel="noopener noreferrer">GitHub</a>.
+</p>
 
 <br><br>
                <h2>Results</h2>
@@ -256,20 +260,7 @@ Colours indicate correct letters (<span style="color: green;">green</span>), sub
       </div>
    </section>
 
-   <section id="ack" class="">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-10 mx-auto">
-               <h2 class="section-title-tc">Acknowledgements</h2>
-               <br>
-               This research is funded by the UKRI EPSRC Programme Grant SignGPT EP/Z535370/1, an SNSF Postdoc.Mobility Fellowship P500PT_225450, 
-               and a Royal Society Research Professorship RSRP\R\241003.
-               <br><br>
-               
-            </div>
-         </div>
-      </div>
-   </section>
+
 
    <section id="citation" class="">
       <div class="container">
@@ -293,7 +284,20 @@ Colours indicate correct letters (<span style="color: green;">green</span>), sub
 
 
 
-
+   <section id="ack" class="">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-10 mx-auto">
+               <h2 class="section-title-tc">Acknowledgements</h2>
+               <br>
+               This research is funded by the UKRI EPSRC Programme Grant SignGPT EP/Z535370/1, an SNSF Postdoc.Mobility Fellowship P500PT_225450, 
+               and a Royal Society Research Professorship RSRP\R\241003.
+               <br><br>
+               
+            </div>
+         </div>
+      </div>
+   </section>
 
 
    <section id="team" class="team-section">
