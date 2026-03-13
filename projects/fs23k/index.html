@@ -58,6 +58,9 @@
                <li class="nav-item">
                   <a class="nav-link js-scroll-trigger" href="#downloads">Downloads</a>
                </li>
+                  <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#ack">Acknowledgements</a>
+               </li>
                <li class="nav-item">
                   <a class="nav-link js-scroll-trigger" href="#citation">Citation</a>
                </li>
@@ -103,7 +106,7 @@
                            style="text-decoration: none"> Paper <i class="fa fa-print"></i></a> &nbsp;&nbsp;
                         <a class="publink" href="https://github.com/chan-alyssa/Fingerspelling-Recognition/" target="_blank"
                            style="text-decoration: none"> Code <i class="fa fa-github"></i></a> &nbsp;&nbsp;
-                           <a class="publink" href="" target="_blank"
+                           <a class="publink" href="https://www.robots.ox.ac.uk/~vgg/data/bobsl/" target="_blank"
                            style="text-decoration: none"> Dataset <i class="fa fa-database"></i></a>&nbsp;&nbsp;
                         <h3>
                   </div>
@@ -118,6 +121,8 @@
    </header>
 
 
+
+   
    <section id="about" class="about-section">
       <div class="container">
          <div class="row">
@@ -129,69 +134,18 @@
                   <p><img class="img-fluid" alt="teaser" src="images/teasor_img.png"></p>
                </div>
                <br><br>
-               <h2>Abstract</h2>
-               <p class="lead text-justify">
-Fingerspelling is a critical component of British Sign Language (BSL), used to spell proper names, technical terms, and words that lack established lexical signs. 
-Fingerspelling recognition is challenging due to the rapid pace of signing and common letter omissions by native signers, while existing BSL fingerspelling datasets are either small in scale or temporally and letter-wise inaccurate.
-In this work, we introduce a new large-scale BSL fingerspelling dataset, FS23K, constructed using an iterative annotation framework. In addition, we propose a fingerspelling recognition model that explicitly accounts for bi-manual interactions and mouthing cues. As a result, with refined annotations, 
-our approach halves the character error rate (CER) compared to the prior state of the art on fingerspelling recognition.
-These findings demonstrate the effectiveness of our method and highlight its potential to support future research in sign language understanding and scalable, automated annotation pipelines. The dataset, code, and trained models will be released upon acceptance.
-               </p>
 
-
-                  <p><img class="w-100 img-fluid" alt="two-hands-fingerspelling" src="images/alph.png"></p>
-                     BSL alphabet. Unlike many other sign languages, British Sign Language (BSL) employs bi-manual fingerspelling, which poses additional challenges for recognition due to frequent occlusions between the two hands.
-
-
-             
-               <div class="img-wide text-center"></div>
-               <br><br>
-               <h2>FS23K Dataset</h2>
-               <p><img class="w-100 img-fluid" alt="comparison_table" src="images/comparison_table.png"></p>
-               FS23K is a large-scale dataset for fingerspelling recognition, containing 23K annotated word instances with precise temporal boundaries.
-                <p><img class="w-100 img-fluid" alt="dataset_construction" src="images/dataset_construction.png"></p>
-                    Dataset Construction. To construct FS23K, we employ a multi-stage iterative annotation strategy. Starting from a small set of strong annotations from the CSLR fingerspelling training set, we progressively re-annotate noisy pseudo annotations from the Transpeller dataset. 
-    During this iterative process, increasingly reliable annotations are accepted as the classifier improves through training on the expanding dataset.
-                            
-               <br><br>
-         <h2>Pipeline</h2>
-                  <p><img class="w-100 img-fluid" alt="pipeline" src="images/pipeline2.png"></p>
-                     Fingerspelling recognition network architecture. The model leverages two complementary feature modalities: lip features extracted using AUTO-AVSR and hand features obtained from HAMER. 
-    Each modality is first passed through an individual linear projection to align feature dimensions, followed by separate Transformer encoders. 
-    The encoded features are then concatenated and further processed by a Transformer encoder. 
-    Finally, a two-layer MLP predicts per-frame letter labels, which are also used as inputs to the CTC decoder. The dimensions are shown in the numbers beside the arrows. The 384 dimensional hand features cover the vector dimension for both hands.
-            
-
-<br><br>
-               <h2>Results</h2>
-                  <p><img class="w-100 img-fluid" alt="result" src="images/results.png"></p>
-                     Example correct fingerspelling predictions.
-Top: a subset of the video frames with corresponding letters.
-Bottom: full-word predictions from Transpeller and our model with character error rates (CER).
-Colours indicate correct letters (<span style="color: green;">green</span>), substitutions (<span style="color: red;">red</span>), and insertions/deletions (<span style="color: blue;">blue</span>).
-     
-
-            </div>
-         </div>
-      </div>
-   </section>
-
-
-
-
-
-
-<section id="video" class="">
+               <section id="video" class="">
   <div class="container">
     <div class="row">
       <div class="col-lg-10 mx-auto" >
 
         <h2 class="section-title-tc">Fingerspelling Detection</h2>
 
-        <video width="100%" controls>
+        <!-- <video width="100%" controls>
           <source src="images/demo.mov" type="video/mp4">
           Your browser does not support the video tag.
-        </video>
+        </video> -->
 
         <video width="100%" controls>
           <source src="images/demo2.mov" type="video/mp4">
@@ -226,6 +180,60 @@ Colours indicate correct letters (<span style="color: green;">green</span>), sub
   </div>
 </section>
 
+               <p class="lead text-justify">
+Fingerspelling is a critical component of British Sign Language (BSL), used to spell proper names, technical terms, and words that lack established lexical signs. 
+Fingerspelling recognition is challenging due to the rapid pace of signing and common letter omissions by native signers, while existing BSL fingerspelling datasets are either small in scale or temporally and letter-wise inaccurate.
+In this work, we introduce a new large-scale BSL fingerspelling dataset, FS23K, constructed using an iterative annotation framework. In addition, we propose a fingerspelling recognition model that explicitly accounts for bi-manual interactions and mouthing cues. As a result, with refined annotations, 
+our approach halves the character error rate (CER) compared to the prior state of the art on fingerspelling recognition.
+These findings demonstrate the effectiveness of our method and highlight its potential to support future research in sign language understanding and scalable, automated annotation pipelines. 
+               </p>
+
+
+                  <p><img class="w-100 img-fluid" alt="two-hands-fingerspelling" src="images/alph.png"></p>
+                     BSL alphabet. Unlike many other sign languages, British Sign Language (BSL) employs bi-manual fingerspelling, which poses additional challenges for recognition due to frequent occlusions between the two hands.  Note, these examples are for a left-handed signer.
+
+
+             
+               <div class="img-wide text-center"></div>
+               <br><br>
+               <h2>FS23K Dataset</h2>
+               <p class="text-center"><img class="w-75 img-fluid" alt="comparison_table" src="images/dataset_stats.png"></p>
+               <p><img class="w-100 img-fluid" alt="comparison_table" src="images/histogram.png"></p>
+               FS23K is a large-scale dataset for fingerspelling recognition, containing 23K annotated word instances with precise temporal boundaries.
+                <p><img class="w-100 img-fluid" alt="dataset_construction" src="images/dataset_construction.png"></p>
+                    Dataset Construction. To construct FS23K, we employ a multi-stage iterative annotation strategy. Starting from a small set of strong annotations from the CSLR fingerspelling training set, we progressively re-annotate noisy pseudo annotations from the Transpeller dataset. 
+    During this iterative process, increasingly reliable annotations are accepted as the classifier improves through training on the expanding dataset.
+                            
+               <br><br>
+         <h2>Pipeline</h2>
+                  <p><img class="w-100 img-fluid" alt="pipeline" src="images/pipeline2.png"></p>
+                     Fingerspelling recognition network architecture. The model leverages two complementary feature modalities: lip features extracted using AUTO-AVSR and hand features obtained from HAMER. 
+    Each modality is first passed through an individual linear projection to align feature dimensions, followed by separate Transformer encoders. 
+    The encoded features are then concatenated and further processed by a Transformer encoder. 
+    Finally, a two-layer MLP predicts per-frame letter labels, which are also used as inputs to the CTC decoder. The dimensions are shown in the numbers beside the arrows. The 384 dimensional hand features cover the vector dimension for both hands.
+            
+
+<br><br>
+               <h2>Results</h2>
+                  <p><img class="w-100 img-fluid" alt="result" src="images/results.png"></p>
+                     Example correct fingerspelling predictions.
+Top: a subset of the video frames with corresponding letters.
+Bottom: full-word predictions from Transpeller and our model with character error rates (CER).
+Colours indicate correct letters (<span style="color: green;">green</span>), substitutions (<span style="color: red;">red</span>), and insertions/deletions (<span style="color: blue;">blue</span>).
+     
+
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+
+
+
+
+
+
 
    <section id="downloads" class="">
       <div class="container">
@@ -239,7 +247,7 @@ Colours indicate correct letters (<span style="color: green;">green</span>), sub
                   <a class="publink" href="https://github.com/chan-alyssa/Fingerspelling-Recognition/" target="_blank"
                      style="text-decoration: none"> Code <i class="fa fa-github"></i></a>
                   &nbsp;&nbsp;
-                  <a class="publink" href="" target="_blank"
+                  <a class="publink" href="https://www.robots.ox.ac.uk/~vgg/data/bobsl/" target="_blank"
                         style="text-decoration: none"> Dataset <i class="fa fa-database"></i></a>&nbsp;&nbsp;
                   &nbsp;&nbsp;
                </h2>
@@ -248,7 +256,20 @@ Colours indicate correct letters (<span style="color: green;">green</span>), sub
       </div>
    </section>
 
-
+   <section id="ack" class="">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-10 mx-auto">
+               <h2 class="section-title-tc">Acknowledgements</h2>
+               <br>
+               This research is funded by the UKRI EPSRC Programme Grant SignGPT EP/Z535370/1, an SNSF Postdoc.Mobility Fellowship P500PT_225450, 
+               and a Royal Society Research Professorship RSRP\R\241003.
+               <br><br>
+               
+            </div>
+         </div>
+      </div>
+   </section>
 
    <section id="citation" class="">
       <div class="container">
@@ -268,6 +289,9 @@ Colours indicate correct letters (<span style="color: green;">green</span>), sub
          </div>
       </div>
    </section>
+
+
+
 
 
 
