@@ -143,10 +143,10 @@
 
         <h2 class="section-title-tc">Fingerspelling Detection</h2>
 
-        <!-- <video width="100%" controls>
+        <video width="100%" controls>
           <source src="images/demo.mov" type="video/mp4">
           Your browser does not support the video tag.
-        </video> -->
+        </video>
 
         <video width="100%" controls>
           <source src="images/demo2.mov" type="video/mp4">
@@ -198,12 +198,20 @@ These findings demonstrate the effectiveness of our method and highlight its pot
                <div class="img-wide text-center"></div>
                <br><br>
                <h2>FS23K Dataset</h2>
+                              FS23K contains 2 datasets: temporal boundaries (133K) and words (23K).
+These datasets derive from the BOBSl dataset, which contains over 1400 hours of interpreted data from the BBC. We make use of the Transpeller automated annotations (also from BOBSL), which contain noisy automatic annotations.
+The temporal boundaries dataset contain cleaned, time-aligned entries from the Transpeller automatic annotations, with false positives and unavailable videos removed.
+The word-level dataset is a subset of the temporal boundaries dataset, where the word is fully spelt out and all letters are present. Often when fingerspelling, signers abbreviate words so only 'd' is spelt to communicate 'Darwin'.
                <p class="text-center"><img class="w-75 img-fluid" alt="comparison_table" src="images/dataset_stats.png"></p>
+               Dataset statistics. FS23K provides large-scale annotations, covering a wide range of samples and diverse signers.
+
                <p><img class="w-100 img-fluid" alt="comparison_table" src="images/histogram.png"></p>
-               FS23K is a large-scale dataset for fingerspelling recognition, containing 23K annotated word instances with precise temporal boundaries.
+               Histogram of letter distribution in FS23K. The letters a (16,577) and e (13,754) occur most frequently, whereas q (143) and x (322) appear least often. This imbalance reflects the natural distribution of letters in in-the-wild BBC broadcast data.
+               <br>
+<!-- 
                 <p><img class="w-100 img-fluid" alt="dataset_construction" src="images/dataset_construction.png"></p>
                     Dataset Construction. To construct FS23K, we employ a multi-stage iterative annotation strategy. Starting from a small set of strong annotations from the CSLR fingerspelling training set, we progressively re-annotate noisy pseudo annotations from the Transpeller dataset. 
-    During this iterative process, increasingly reliable annotations are accepted as the classifier improves through training on the expanding dataset.
+    During this iterative process, increasingly reliable annotations are accepted as the classifier improves through training on the expanding dataset. -->
                             
                <br><br>
          <h2>Pipeline</h2>
