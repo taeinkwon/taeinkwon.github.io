@@ -143,15 +143,20 @@
 
         <h2 class="section-title-tc">Fingerspelling Detection</h2>
 
-        <video width="100%" controls>
-          <source src="images/demo.mov" type="video/mp4">
+         <video width="100%" controls>
+          <source src="images/TPTP1.mov" type="video/mp4">
           Your browser does not support the video tag.
         </video>
 
-        <video width="100%" controls>
+        <!-- <video width="100%" controls>
+          <source src="images/demo.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video> -->
+
+        <!-- <video width="100%" controls>
           <source src="images/demo2.mov" type="video/mp4">
           Your browser does not support the video tag.
-        </video>
+        </video> -->
         Videos depicting fingerspelling detection ground truth (blue line) and predictions (red dotted line). 
         If fingerspelling is present, the line is at 1 and 0 if not present. 
         The graph shows fingerspelling predictions. 
@@ -178,7 +183,7 @@
   </video>
 
 </div>
-        Many GT word entries have 2 words present, for example DD (dioxide). In this case the bracketed word is the associated word (dioxide) and the letters are what is being spelt (DD). We also present the character error rate (CER), which is the number of substitutions, deletions and insertions required to change the predicted word into the ground truth.
+        Many GT word entries have two items present, for example DD (dioxide). In this case the bracketed word is the associated word (dioxide) and the letters are what is being spelt (DD). We also present the character error rate (CER), which is the number of substitutions, deletions and insertions required to change the predicted word into the ground truth.
       </div>
     </div>
   </div>
@@ -222,7 +227,7 @@ The word-level dataset is a subset of the temporal boundaries dataset, where the
     During this iterative process, increasingly reliable annotations are accepted as the classifier improves through training on the expanding dataset. -->
                             
                <br><br>
-         <h2>Pipeline</h2>
+         <h2>Network Architecture</h2>
                   <p><img class="w-100 img-fluid" alt="pipeline" src="images/pipeline2.png"></p>
                      Fingerspelling recognition network architecture. The model leverages two complementary feature modalities: lip features extracted using AUTO-AVSR and hand features obtained from HAMER. 
     Each modality is first passed through an individual linear projection to align feature dimensions, followed by separate Transformer encoders. 
